@@ -45,12 +45,12 @@
 
 ### Вариант 1 (рекомендуемый):
 ```bash
-sh <(wget -qO - https://raw.githubusercontent.com/MPE-Coders/NG-Core-Installer/main/ng_installer.sh)
+bash <(wget -qO - https://raw.githubusercontent.com/MPE-Coders/NG-Core-Installer/main/ng_installer.sh)
 ```
 
 ### Вариант 2 (с curl):
 ```bash
-sh <(curl -sSL https://raw.githubusercontent.com/MPE-Coders/NG-Core-Installer/main/ng_installer.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/MPE-Coders/NG-Core-Installer/main/ng_installer.sh)
 ```
 
 **Важно:** Перед запуском убедитесь, что вы понимаете, что делает эта команда. Она скачивает и сразу выполняет скрипт с GitHub. Для большей безопасности рекомендуется сначала скачать скрипт, проверить его содержимое, а затем запустить.
