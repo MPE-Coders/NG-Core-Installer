@@ -82,7 +82,7 @@ check_composer() {
     log_info "Проверка Composer..."
     if [ -f "$COMPOSER_BIN" ]; then
         log_success "Composer уже установлен: $COMPOSER_BIN"
-        "$PHP_BIN" "$COMPOSER_BIN" --version 2&>1
+        "$PHP_BIN" "$COMPOSER_BIN" --version
         return 0 # Composer установлен
     else
         log_warn "Composer не найден по пути $COMPOSER_BIN."
@@ -124,7 +124,7 @@ install_php_binaries() {
     log_info "Проверка наличия PHP по пути: $PHP_BIN"
     if [ -f "$PHP_BIN" ]; then
         log_success "PHP уже установлен."
-        "$PHP_BIN" -v 2&>1
+        "$PHP_BIN" -v
         return 0
     fi
 
@@ -158,7 +158,7 @@ install_php_binaries() {
     log_info "Проверка установки PHP:"
     if [ -f "$PHP_BIN" ]; then
         log_success "PHP бинарники успешно установлены."
-        "$PHP_BIN" -v 2&>1
+        "$PHP_BIN" -v
     else
         log_error "PHP бинарники не были установлены корректно."
         exit 1
@@ -183,7 +183,7 @@ install_composer() {
     log_success "Composer Installer загружен."
 
     log_info "Установка Composer в ./bin/composer.phar"
-    "$PHP_BIN" composer-setup.php --install-dir=./bin --filename=composer.phar 2&>1
+    "$PHP_BIN" composer-setup.php --install-dir=./bin --filename=composer.phar
     if [ $? -ne 0 ]; then
         log_error "Не удалось установить Composer."
         rm -f composer-setup.php
