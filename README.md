@@ -1,6 +1,5 @@
 # 🚀 NG Core Installer
 
-![GitHub license](https://img.shields.io/github/license/MPE-Coders/NG-Core-Installer?style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/MPE-Coders/NG-Core-Installer?style=flat-square)
 ![GitHub forks](https://img.shields.io/github/forks/MPE-Coders/NG-Core-Installer?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/MPE-Coders/NG-Core-Installer?style=flat-square)
