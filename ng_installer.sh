@@ -44,27 +44,27 @@ check_license_acceptance() {
     log_header "ЛИЦЕНЗИОННОЕ СОГЛАШЕНИЕ"
     echo -e "${YELLOW}NG Core Installer${NC}"
     echo -e "Copyright (c) 2026 Dmitrii Girsanov/XackiGiFF | MPE: Coders IT organisation"
-    echo ""
+    echo -e ""
     echo -e "Этот скрипт распространяется под лицензией:"
     echo -e "${BLUE}Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)${NC}"
-    echo ""
+    echo -e ""
     echo -e "${GREEN}Вы можете:${NC}"
     echo -e "• Использовать этот скрипт для некоммерческих целей"
     echo -e "• Модифицировать и адаптировать скрипт"
     echo -e "• Распространять скрипт с указанием авторства"
-    echo ""
+    echo -e ""
     echo -e "${RED}Вы НЕ можете:${NC}"
     echo -e "• Использовать скрипт в коммерческих целях"
     echo -e "• Продавать или получать доход от использования скрипта"
-    echo ""
+    echo -e ""
     echo -e "Полный текст лицензии: ${BLUE}https://creativecommons.org/licenses/by-nc/4.0/${NC}"
-    echo ""
+    echo -e ""
 
     read -p "$(echo -e "${YELLOW}Вы принимаете условия лицензии? (y/N): ${NC}")" choice
 
     case "$choice" in
         y|Y )
-            echo "true" > "$LICENSE_FILE"
+            echo -e "true" > "$LICENSE_FILE"
             log_success "Согласие с лицензией принято и сохранено."
             sleep 1
             return 0
